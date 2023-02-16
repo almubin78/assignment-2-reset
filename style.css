@@ -29,7 +29,6 @@ header {
     text-align: center;
     width: 80%;
     margin: 20px auto;
-    border: 2px dotted yellowgreen;
 }
 
 header p {
@@ -53,6 +52,12 @@ header img {
 }
 
 /* feature-section */
+.feature-section{
+    margin-top: 50px;
+}
+.feature-section h2{
+    font-size: 30px;
+}
 .feature-container {
     display: flex;
     width: 85%;
@@ -74,29 +79,31 @@ header img {
     display: flex;
     margin: 20px auto;
     width: 85%;
+    height: 1049px;
+    margin-top: 50px;
 }
 .content-section-love{
-    width: 50%;
     margin-right: 30px;
 }
-.content-section-heading h3:before{
-    content:'ff ';
-    height:10px;
-    width:20px;
-    color: red;
+.content-section-heading h3{
+    font-size: 35px;
+    margin-bottom: 20px;
 }
 .single-post {
     background: #FFFFFF;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
-    margin-top: 5px;
+    margin-top: 25px;
     padding: 7px;
 }
 .img-section{
-    width:50%;
+    width: 100%;
+    height: 700px;
+    /* object-fit: cover; */
 }
 .img-section img{
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
 .experience{
     position:relative;
@@ -130,19 +137,30 @@ header img {
     height: 200px;
     align-items: center;
     justify-content: space-around;
-
+    border-radius: 20px;
 
 }
-.fact-content{
+.fact-content h3{
+    font-size: 30px;
+    margin-bottom: 15px;
 
+}
+.cart:hover{
+    background-color: #FF900E;
+    transform: translateX(10px) rotate(10deg) translateY(5px);
+    animation: 3s infinite alternate slidein;
+    cursor: pointer;
 }
 /* Sponsor Section */
 .sponsors-container{
     width:85%;
     margin:20px auto;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .sponsor-content{
+    position: relative;
+    left:20%;
+     
 
 }
 .sponsor-logo{
@@ -151,3 +169,42 @@ header img {
     justify-content: space-around;
     align-items: center;
 }
+footer{
+    width:85%;
+    margin:20px auto;
+    background-color: #FFF4E7;
+    padding: 5px;
+    margin-top: 50px;
+}
+footer h4{
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .feature-container{
+        flex-direction: column;
+    }
+    .love-and-enjoy{
+        flex-direction: column;
+        position: relative;
+    }
+    .experience{
+        position: absolute
+        ;
+        left:85%;
+        bottom: 95%;
+    }
+    .cart-section{
+        flex-direction: column;
+
+    }
+    .cart{
+        margin-top: 5px;
+    }
+    .sponsor-logo{
+        flex-direction: column;
+    }
+    .sponsor-logo img{
+        margin-top: 20px;
+    }
+  }
